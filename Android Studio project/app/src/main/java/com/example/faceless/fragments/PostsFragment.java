@@ -18,7 +18,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.example.faceless.R;
-import com.example.faceless.activities.ZCreatePostActivity;
+import com.example.faceless.activities.CreatePostActivity;
 import com.example.faceless.adapters.PostListAdapter;
 import com.example.faceless.application.ZApplication;
 import com.example.faceless.extras.RequestTags;
@@ -164,7 +164,7 @@ public class PostsFragment extends BaseFragment implements RequestTags, View.OnC
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     if(which==0){
-                        Intent i = new Intent(getActivity(), ZCreatePostActivity.class);
+                        Intent i = new Intent(getActivity(), CreatePostActivity.class);
                         getActivity().startActivity(i);
                     }
                 }

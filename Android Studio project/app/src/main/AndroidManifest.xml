@@ -93,7 +93,7 @@
             android:theme="@style/BNCNoActionBar"/>
 
         <activity
-            android:name=".activities.ZCreatePostActivity"
+            android:name=".activities.CreatePostActivity"
             android:label="@string/app_name"
             android:theme="@style/BNCNoActionBar"/>
 

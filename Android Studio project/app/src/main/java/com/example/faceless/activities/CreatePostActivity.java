@@ -20,7 +20,7 @@ import java.io.ByteArrayOutputStream;
 /**
  * Created by praveen goel on 10/17/2015.
  */
-public class ZCreatePostActivity extends BaseActivity implements View.OnClickListener {
+public class CreatePostActivity extends BaseActivity implements View.OnClickListener {
 
     String encodedString;
     String fileName;

@@ -67,7 +67,7 @@ public class ChatActivity extends BaseActivity implements RequestTags, OnClickLi
 
         setConnectionErrorVariables();
         setProgressLayoutVariables();
-        toolbar=(Toolbar)findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
 
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

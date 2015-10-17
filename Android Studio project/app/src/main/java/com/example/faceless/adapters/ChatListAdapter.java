@@ -1,12 +1,15 @@
 package com.example.faceless.adapters;
 
 import android.content.Context;
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.RecyclerView.ViewHolder;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -25,6 +28,9 @@ public class ChatListAdapter extends
     Context context;
     List<ZChatObject.ChatItem> chats;
     boolean isMoreAllowed;
+    int chatidToFlag;
+    MyClickListener clickListener;
+    AlertDialog alertDialog = null;
 
     public ChatListAdapter(Context context, List<ChatItem> chats,
                            boolean isMoreAllowed) {
@@ -32,6 +38,7 @@ public class ChatListAdapter extends
         this.context = context;
         this.chats = chats;
         this.isMoreAllowed = isMoreAllowed;
+        clickListener = new MyClickListener();
     }
 
     @Override
@@ -57,6 +64,9 @@ public class ChatListAdapter extends
             holder.chatTime.setText(ChatTimeUtils.getChatTime(chats.get(pos).getTime()));
 
             holder.chatDateHolder.setVisibility(View.GONE);
+
+            holder.chatMainContainer.setTag(pos);
+            holder.chatMainContainer.setOnClickListener(clickListener);
 
             try {
                 ZChatObject.ChatItem chatCurrent = chats.get(pos);
@@ -111,6 +121,7 @@ public class ChatListAdapter extends
 
         TextView chatText, chatTime, chatDate;
         LinearLayout chatDateHolder;
+        FrameLayout chatMainContainer;
 
         public ChatHolder(View v) {
             super(v);
@@ -118,6 +129,7 @@ public class ChatListAdapter extends
             chatTime = (TextView) v.findViewById(R.id.chattime);
             chatDateHolder = (LinearLayout) v.findViewById(R.id.chatdatelayout);
             chatDate = (TextView) v.findViewById(R.id.dateforchat);
+            chatMainContainer = (FrameLayout) v.findViewById(R.id.openflagchat);
         }
     }
 
@@ -125,6 +137,30 @@ public class ChatListAdapter extends
 
         public ChatLoadingHolder(View itemView) {
             super(itemView);
+        }
+    }
+
+    class MyClickListener implements View.OnClickListener {
+
+        @Override
+        public void onClick(View v) {
+            if (v.getId() == R.id.openflagchat) {
+                chatidToFlag = (int) v.getTag();
+                final AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                builder.setMessage("Flag this chat?").setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        alertDialog.dismiss();
+                    }
+                });
+                alertDialog = builder.create();
+                alertDialog.show();
+            }
         }
     }
 }

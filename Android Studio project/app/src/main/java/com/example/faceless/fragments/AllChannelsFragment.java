@@ -58,6 +58,11 @@ public class AllChannelsFragment extends BaseFragment implements RequestTags {
         hideConnectionErrorLayout();
         showProgressLayout();
 
+        loadData();
+    }
+
+
+    void loadData() {
         StringRequest req = new StringRequest(Method.POST,
                 ZApplication.getBaseUrl() + "all_channels/",
                 new Listener<String>() {
