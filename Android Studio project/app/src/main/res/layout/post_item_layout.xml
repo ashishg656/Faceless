@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/f_margin_medium"
+    android:background="@color/f_white_color"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/f_grey_shade_4"/>
+
+    <LinearLayout
+        android:id="@+id/polllayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/poltext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/f_margin_mini"
+            android:paddingLeft="@dimen/f_margin_medium"
+            android:paddingRight="@dimen/f_margin_small"
+            android:paddingTop="@dimen/f_margin_mini"
+            android:text="POLL"
+            android:textColor="@color/f_green_color_primary"/>
+
+        <View
+            android:id="@+id/pollview"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/f_grey_shade_5"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/pollheading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:paddingBottom="@dimen/f_margin_small"
+            android:paddingLeft="@dimen/f_margin_large"
+            android:paddingRight="@dimen/f_margin_large"
+            android:paddingTop="@dimen/f_margin_large"
+            android:text="Post Heading"
+            android:textColor="@color/f_text_color_dark"
+            android:textSize="@dimen/f_font_medium"
+            android:textStyle="bold"
+            />
+
+        <ImageView
+            android:layout_width="@dimen/f_feed_button_size"
+            android:layout_height="@dimen/f_feed_button_size"
+            android:layout_margin="@dimen/f_margin_mini"
+            android:padding="@dimen/f_margin_small"
+            android:src="@drawable/ic_flag"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/f_margin_supermini"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/f_margin_large">
+
+        <ImageView
+            android:layout_width="@dimen/f_font_mini"
+            android:layout_height="@dimen/f_font_mini"
+            android:src="@drawable/ic_clock"/>
+
+        <TextView
+            android:id="@+id/posttime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/f_margin_small"
+            android:includeFontPadding="false"
+            android:text="10:10 am"
+            android:textSize="@dimen/f_font_mini"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="4"
+        android:paddingBottom="@dimen/f_margin_small"
+        android:paddingLeft="@dimen/f_margin_large"
+        android:paddingRight="@dimen/f_margin_large"
+        android:paddingTop="@dimen/f_margin_large"
+        android:text="Post Description"
+        android:textColor="@color/f_text_color_dark"
+        />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/f_post_image_height"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/comemnsts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/f_margin_small"
+        android:paddingLeft="@dimen/f_margin_large"
+        android:paddingRight="@dimen/f_margin_large"
+        android:paddingTop="@dimen/f_margin_large"
+        android:text="10 comments"
+        android:textColor="@color/f_text_color_medium_dark"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/f_margin_medium">
+
+        <ImageView
+            android:id="@+id/upvo"
+            android:layout_width="@dimen/f_feed_button_size"
+            android:layout_height="@dimen/f_feed_button_size"
+            android:clickable="true"
+            android:src="@drawable/f_upvote_button_selector"/>
+
+        <TextView
+            android:id="@+id/numupvotes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/f_margin_small"
+            android:clickable="true"
+            android:includeFontPadding="false"
+            android:text="5"/>
+
+        <ImageView
+            android:id="@+id/downvotes"
+            android:layout_width="@dimen/f_feed_button_size"
+            android:layout_height="@dimen/f_feed_button_size"
+            android:clickable="true"
+
+            android:src="@drawable/f_downvote_button_selector"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/like"
+            android:layout_width="@dimen/f_feed_button_size"
+            android:layout_height="@dimen/f_feed_button_size"
+            android:layout_gravity="right"
+            android:clickable="true"
+            android:src="@drawable/f_like_button_selector"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/f_grey_shade_4"/>
+
+</LinearLayout>

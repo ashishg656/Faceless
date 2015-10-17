@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- MARGINS -->
+    <dimen name="f_margin_supermini">2dp</dimen>
+    <dimen name="f_margin_mini">4dp</dimen>
+    <dimen name="f_margin_small">8dp</dimen>
+    <dimen name="f_margin_medium">12dp</dimen>
+    <dimen name="f_margin_large">16dp</dimen>
+    <dimen name="f_margin_xlarge">25dp</dimen>
+
+    <!-- Text Sizes -->
+    <dimen name="f_font_supermini">10sp</dimen>
+    <dimen name="f_font_mini">12sp</dimen>
+    <dimen name="f_font_small">14sp</dimen>
+    <dimen name="f_font_medium">16sp</dimen>
+    <dimen name="f_font_large">18sp</dimen>
+
+    <!-- Material Design Dimens -->
+    <dimen name="f_toolbar_height">56dp</dimen>
+    <dimen name="f_button_height">48dp</dimen>
+
+    <!-- App dimens-->
+    <dimen name="f_drawer_header_top_padding">56dp</dimen>
+    <dimen name="f_drawer_profile_image_height">64dp</dimen>
+    <dimen name="f_margin_top_108">108dp</dimen>
+    <dimen name="f_margin_top_104">104dp</dimen>
+    <dimen name="f_margin_top_60">60dp</dimen>
+    <dimen name="bnc_launch_app_icon_margin">210dp</dimen>
+    <dimen name="f_post_image_height">180dp</dimen>
+    <dimen name="f_feed_button_size">35dp</dimen>
+</resources>

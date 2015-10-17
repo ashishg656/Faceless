@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/f_white_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/f_margin_large">
+
+        <TextView
+            android:id="@+id/signupfragmentintrotext1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/f_margin_mini"
+            android:textColor="@color/f_text_color_dark"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/f_margin_xlarge">
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Username"
+                android:inputType="text"
+                android:singleLine="true"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/f_margin_xlarge">
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:inputType="text"
+                android:singleLine="true"/>
+        </android.support.design.widget.TextInputLayout>
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/continueb"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/f_toolbar_height"
+        android:layout_gravity="bottom"
+        android:foreground="?attr/selectableItemBackground">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/PrimaryColor"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="GET STARTED"
+                android:textColor="@color/f_white_color"
+                android:textSize="@dimen/f_font_medium"/>
+
+            <ImageView
+                android:layout_width="@dimen/f_margin_medium"
+                android:layout_height="@dimen/f_margin_medium"
+                android:layout_marginLeft="@dimen/f_margin_medium"
+                android:layout_marginRight="@dimen/f_margin_large"
+                android:src="@drawable/ic_hardware_right_white"/>
+        </LinearLayout>
+
+    </FrameLayout>
+</FrameLayout>

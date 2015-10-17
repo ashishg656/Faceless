@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/chatdatelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/f_margin_medium"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/dateforchat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="28 september 2015"
+            android:textColor="@color/PrimaryColor"
+            android:textSize="@dimen/f_font_medium"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/f_margin_mini"
+        android:background="@drawable/chat_shadow"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/f_margin_small">
+
+                <TextView
+                    android:id="@+id/chattext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chat content"
+                    android:textColor="@color/f_text_color_dark"/>
+
+                <TextView
+                    android:id="@+id/chattime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:textColor="@color/f_text_color_medium_dark"
+                    android:textSize="@dimen/f_font_supermini"/>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

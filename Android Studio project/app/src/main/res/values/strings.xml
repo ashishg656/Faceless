@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Faceless</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="f_signup_fragment_create_team_intro_text">Registering your team on Faceless App is just a two step process.\nEnter your company or team name to get started.</string>
+    <string name="f_signup_fragment_create_account_intro_text">Congrats. You are all set to create your admin account for your team. So lets make your account to manage the team. Just enter the following details and we will do the rest for you.</string>
+    <string name="f_login_fragment_find_team_intro_text">Welcome. Enter the team name that is registered on Faceless to help us connect you to your team.</string>
+    <string name="f_login_fragment_signin_intro_text">Great. You are just one step away to start using the application. Enter the login details provided to you by your team admin to login and connect to your team.</string>
+
+    <string name="f_home_chats">Chats</string>
+    <string name="f_home_posts">Posts</string>
+    <string-array name="f_home_activity_tabs">
+        <item>@string/f_home_posts</item>
+        <item>@string/f_home_chats</item>
+    </string-array>
+</resources>

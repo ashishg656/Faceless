@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar_layout"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/home_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="none"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/f_grey_shade_5"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/f_white_color"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/f_margin_mini">
+
+
+                <EditText
+                    android:id="@+id/messagetosend"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/f_margin_mini"
+                    android:layout_weight="1"
+                    android:hint="Enter message"
+                    android:maxLines="4"/>
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/sendbutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_send"
+                    app:fabSize="mini"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/connection_error_layout"/>
+
+    <include layout="@layout/progress_layout"/>
+</FrameLayout>
